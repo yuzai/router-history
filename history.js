@@ -7,12 +7,12 @@
   history.replaceState({count1:count1,count2:count2},null,'');//最开始的状态，采用replace直接替换
 	a1.addEventListener('click',function(){
     count1++;
-		history.pushState({count1:count1,count2:count2},null,'#/s'+count1);//之后的状态，需要进行保存
+		history.pushState({count1:count1,count2:count2},null,'/s'+count1);//之后的状态，需要进行保存
 		a1.innerHTML = 's'+count1;
 	})
 	a2.addEventListener('click',function(){
     count2++;
-		history.pushState({count1:count1,count2:count2},null,'#/k'+count2);//之后的状态，需要进行保存
+		history.pushState({count1:count1,count2:count2},null,'/k'+count2);//之后的状态，需要进行保存
 		a2.innerHTML = 'k'+count2;
 	})
 	window.addEventListener('popstate',function(e){
