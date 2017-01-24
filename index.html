@@ -1,18 +1,33 @@
 <html>
 
 <head>
-<meta charset='utf-8'>
-<title>测试history</title>
+	<meta charset='utf-8'>
+	<title>测试history</title>
+	<style>
+	  body{
+			margin:5%;
+			background-color:skyblue;
+		}
+	</style>
 </head>
-
 <body>
-<div>
-	<a>s1</a>
-	<a>s2</a>
-</div>
-<script>
-history.pushState('123',null,'/123');
-</script>
+	<h1>h5的history关于前端路由用到了3个新属性</h1>
+	<ol>
+		<li>histroy.pushState(data,title,url)</li>
+		<li>histroy.replaceState(data,title,url)</li>
+		<li>popstate事件</li>
+	</ol>
+	<p>点击下面的两个数字，会看到浏览器url的跳转，同时看到数字的修改，按下后退前进，都可以进行回到上一个状态</p>
+	<p>每次点击，都会将浏览器当前的url以及一些data通过pushState进行保存，这样，在前进后退的时候可以看到url的改变</p>
+	<p>主要作用就是解决单页应用中无法进行保存状态的问题。这样，通过url的更改，可以在popstate事件中对原有元素进行还原（通过传递的data）</p>
+	<div id='div1'>
+		<ul>
+			<li><a id='a1'>s0</a></li>
+			<li><a id='a2'>k0</a></li>
+	  </ul>
+	</div>
+	<script src='history.js'>
+	</script>
 </body>
 
 </html>
