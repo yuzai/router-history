@@ -12,4 +12,4 @@
 
 主要作用就是解决单页应用中无法进行保存状态的问题。这样，通过url的更改，可以在popstate事件中对原有元素进行还原（通过传递的data）;
 
-[demo](blog.xiaoboma.com/router-history)
+[demo](http://blog.xiaoboma.com/router-history)
